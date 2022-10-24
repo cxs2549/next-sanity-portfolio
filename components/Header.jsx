@@ -13,7 +13,7 @@ export const Header = () => {
         </svg>
       </div>
 
-      <div className="px-4 mx-auto  md:max-w-full bg-sky-300 dark:bg-sky-900 lg:max-w-screen-xl md:px-24 lg:px-8 py-4">
+      <div className="px-4 mx-auto  md:max-w-full bg-sky-300 dark:bg-sky-900  md:px-24 lg:px-8 py-4">
         <div className=" flex justify-between">
           <img
             src="/face.jpg"
@@ -21,7 +21,7 @@ export const Header = () => {
             alt=""
           />
           <div className="flex gap-3 text-white">
-            <a href="https://github.com/cxs2549">
+            <a href="https://github.com/cxs2549" target={`_blank`}>
               <AiFillGithub size={28} />
             </a>
             <AiOutlineLinkedin size={28} />
@@ -29,7 +29,7 @@ export const Header = () => {
         </div>
 
         <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
-          <h2 className="mb-6 font-sans text-4xl font-bold md:text-4xl tracking-tight text-white lg:text-5xl xl:text-7xl sm:leading-none">
+          <h2 className="mb-6 font-sans text-4xl font-bold md:text-4xl tracking-tighter text-white lg:text-5xl xl:text-7xl sm:leading-none">
             Web development <br /> with a <span className="">smile</span>
           </h2>
         </div>
