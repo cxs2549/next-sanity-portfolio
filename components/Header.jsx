@@ -14,7 +14,7 @@ export const Header = () => {
       </div>
 
       <div className="px-4 mx-auto  md:max-w-full bg-sky-300 dark:bg-sky-900  md:px-24 lg:px-8 py-4">
-        <div className=" flex justify-between">
+        <div className=" flex justify-between max-w-7xl mx-auto">
           <img
             src="/face.jpg"
             className="rounded-full w-20 h-20 mb-12"
