@@ -12,7 +12,7 @@ const Home = ({ recentProjects, previousProjects }) => {
           {recentProjects.map((project) => (
             <div
               key={project._id}
-              className=" rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none relative"
+              className="relative rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none relative"
             >
               <a
                 href={project.url}
@@ -27,16 +27,21 @@ const Home = ({ recentProjects, previousProjects }) => {
                 />
               </a>
 
-              <div className="flex items-center gap-4 py-4 border-t px-2 bg-white ">
+              <div className="flex items-center gap-2 py-4 border-t px-2 bg-white ">
                 {project.technology.map((tech, i) => (
                   <div key={i} className="">
                     <img
                       src={urlFor(tech)}
                       alt=""
-                      className="w-10 rounded-t-2xl"
+                      className="w-9 rounded-t-2xl"
                     />
                   </div>
                 ))}
+              </div>
+              <div className="absolute  h-8 w-8 top-0 rounded-bl-lg backdrop-blur-md backdrop-filter bg-opacity-10 right-0 grid place-items-center dark:text-neutral-800">
+                <a href={project.github}>
+                  <AiFillGithub size={26} />
+                </a>
               </div>
             </div>
           ))}
