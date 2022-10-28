@@ -7,7 +7,7 @@ const Home = ({ recentProjects, previousProjects }) => {
   return (
     <div>
       <div className="flex px-4 flex-col max-w-7xl mx-auto mt-8">
-        <h1 className="text-3xl font-extrabold tracking-tight mb-4">Recent projects</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight mb-4 pr-0">Recent projects</h1>
         <div className=" xl:px-0 grid xl:grid-cols-3 lg:grid-cols-2 flex-wrap   gap-4  pb-12">
           {recentProjects.map((project) => (
             <div
