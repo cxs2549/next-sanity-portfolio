@@ -12,7 +12,7 @@ const Home = ({ recentProjects, previousProjects }) => {
           {recentProjects.map((project) => (
             <div
               key={project._id}
-              className="relative rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none relative"
+              className="relative rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none "
             >
               <a
                 href={project.url}
@@ -27,7 +27,7 @@ const Home = ({ recentProjects, previousProjects }) => {
                 />
               </a>
 
-              <div className="flex items-center gap-2 py-4 border-t px-2 bg-white ">
+              <div className="flex items-center justify-between py-4 border-t px-2 bg-white ">
                 {project.technology.map((tech, i) => (
                   <div key={i} className="">
                     <img
