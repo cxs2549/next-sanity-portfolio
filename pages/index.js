@@ -7,18 +7,20 @@ const Home = ({ recentProjects, previousProjects }) => {
   return (
     <div>
       <div className="flex px-4 flex-col max-w-7xl mx-auto mt-8">
-        <h1 className="text-3xl font-extrabold tracking-tight mb-4 pr-0">Recent projects</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight mb-4 pr-0">
+          Recent projects
+        </h1>
         <div className=" xl:px-0 grid xl:grid-cols-3 lg:grid-cols-2 flex-wrap   gap-4  pb-12">
           {recentProjects.map((project) => (
             <div
               key={project._id}
-              className="relative rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none "
+              className="relative overflow-hidden  rounded-xl max-w-md"
             >
               <a
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className=""
+                className="rounded-xl overflow-hidden "
               >
                 <img
                   src={urlFor(project.image.asset._ref)}
@@ -27,7 +29,7 @@ const Home = ({ recentProjects, previousProjects }) => {
                 />
               </a>
 
-              <div className="flex items-center justify-between py-4 border-t px-2 bg-white ">
+              <div className="flex items-center gap-4 justify-center py-4 px-2 bg-white ">
                 {project.technology.map((tech, i) => (
                   <div key={i} className="">
                     <img
@@ -48,12 +50,14 @@ const Home = ({ recentProjects, previousProjects }) => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4">
-      <h1 className="text-3xl font-extrabold tracking-tight mb-4">Previous projects</h1>
-      <div className=" xl:px-0 flex overflow-x-scroll w-full  gap-4  pb-12">
+        <h1 className="text-3xl font-extrabold tracking-tight mb-4">
+          Previous projects
+        </h1>
+        <div className=" xl:px-0 flex overflow-x-scroll w-full  gap-4  pb-12">
           {previousProjects.map((project) => (
             <div
               key={project._id}
-              className=" rounded-t-2xl overflow-hidden border rounded-b-xl max-w-md dark:border-none relative min-w-[370px]"
+              className="    max-w-md  relative min-w-[370px]"
             >
               <a
                 href={project.url}
@@ -68,7 +72,7 @@ const Home = ({ recentProjects, previousProjects }) => {
                 />
               </a>
 
-              <div className="flex items-center gap-4 py-4 border-t px-2 bg-white ">
+              <div className="flex items-center justify-center gap-4 py-4 px-2 bg-white ">
                 {project.technology.map((tech, i) => (
                   <div key={i} className="">
                     <img
